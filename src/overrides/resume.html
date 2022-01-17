@@ -13,3 +13,10 @@
   }
 </style>
 {% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+  (() => document.querySelectorAll(".headerlink").forEach(el=>el.remove()))()
+</script>
+{% endblock %}

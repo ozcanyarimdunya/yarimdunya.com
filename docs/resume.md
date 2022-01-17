@@ -8,8 +8,6 @@ hide:
 
 # Özcan Yarımdünya
 
-## Python Developer @ [sahibinden.com](https://sahibinden.com)
-
 I am a simple Python Developer
 
 ---

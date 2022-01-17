@@ -38,7 +38,7 @@
 {% block scripts %}
 {{ super() }}
 <script>
-  (() => document.querySelector(".headerlink").remove())()
+  (() => document.querySelectorAll(".headerlink").forEach(el=>el.remove()))()
 </script>
 {% endblock %}
 
