@@ -1,6 +1,7 @@
 ---
 template: overrides/resume.html 
-title: Resume 
+title: Resume
+status: Hidden
 hide:
   - toc
   - navigation
@@ -14,12 +15,13 @@ I am a simple Python Developer
 
 ### Contact Information
 
-| Email Address     | Birthdate          | Phone               | Website                                          |
-|-------------------|--------------------|---------------------|--------------------------------------------------|
-| ozcanyd@gmail.com | 26/05/1994         | +90 531 082 1028    | [https://yarimdunya.com](https://yarimdunya.com) |
-|                   |                    |                     |                                                  |
-| **Gender**        | **Nationality**    | **Driving Licence** | **Address**                                      |
-| Male              | Republic of Turkey | B                   | Umraniye/Istanbul/Turkey                         |
+
+| Email Address       | ozcanyd@gmail |     | Phone           | +90 531 082 1028                                 |
+|---------------------|---------------|-----|-----------------|--------------------------------------------------|
+| **Birthdate**       | 26/05/1994    |     | **Website**     | [https://yarimdunya.com](https://yarimdunya.com) |
+| **Gender**          | Male          |     | **Nationality** | Republic of Turkey                               |
+| **Driving Licence** | B             |     | **Address**     | Umraniye / Istanbul / Turkey                     |
+
 
 ### Experience
 
