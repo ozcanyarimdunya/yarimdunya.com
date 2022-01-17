@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+
+{% block styles %}
+{{ super() }}
+
+<style>
+  .md-content {
+    text-align: center;
+  }
+
+  .md-button {
+    padding: 0.25rem 1rem !important;
+    min-width: 5rem;
+    margin: .1rem;
+  }
+</style>
+{% endblock %}
+
+{% block footer %}
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      {% include "partials/copyright.html" %}
+      {% include "partials/social.html" %}
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+{% block content %}
+{{ super () }}
+<div class="mdx-hero__content">
+  <a href="{{ 'blog/' | url }}" class="md-button md-button--primary">Blog</a>
+  <a href="{{ 'resume/' | url }}" class="md-button">Resume</a>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+  (() => document.querySelector(".headerlink").remove())()
+</script>
+{% endblock %}
+
