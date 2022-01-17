@@ -25,3 +25,15 @@ for i in ${names[@]}; do
   echo "${i}"
 done
 ```
+
+## Press any key to continue ...
+
+```shell
+  while read -r -n 1 key; do
+    if [ "$key" == "y" ]; then
+      echo "Break .."
+      break
+    fi
+    echo "Continue"
+  done
+```
