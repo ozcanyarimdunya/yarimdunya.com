@@ -6,6 +6,10 @@
 [[ "x" == "x" ]] && echo "Ok!"
 ```
 
+```shell
+[[ ${value} > 0 ]] && result="yes" || result="no"
+```
+
 ## Multi line
 
 ```shell

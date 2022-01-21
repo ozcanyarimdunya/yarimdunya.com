@@ -33,3 +33,9 @@ sshpass -f /tmp/pwd.txt ssh username@server
 
 sshpass -f /tmp/pwd.txt scp -r username@server:/tmp/* ~/Desktop/
 ```
+
+> with a user
+ 
+```shell
+ssh -l user username@server
+```
