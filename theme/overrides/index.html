@@ -16,6 +16,15 @@
 </style>
 {% endblock %}
 
+{% block content %}
+{{ super () }}
+<br>
+<div class="mdx-hero__content">
+  <a href="{{ 'blog/' | url }}" class="md-button md-button--primary">Blog</a>
+  <a href="https://ozcan.yarimdunya.com/" target="_blank" class="md-button">Resume</a>
+</div>
+{% endblock %}
+
 {% block footer %}
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
@@ -27,18 +36,10 @@
 </footer>
 {% endblock %}
 
-{% block content %}
-{{ super () }}
-<div class="mdx-hero__content">
-  <a href="{{ 'blog/' | url }}" class="md-button md-button--primary">Blog</a>
-  <a href="https://ozcan.yarimdunya.com/" target="_blank" class="md-button">Resume</a>
-</div>
-{% endblock %}
-
 {% block scripts %}
 {{ super() }}
 <script>
-  (() => document.querySelectorAll(".headerlink").forEach(el=>el.remove()))()
+  (() => document.querySelectorAll(".headerlink").forEach(el => el.remove()))()
 </script>
 {% endblock %}
 

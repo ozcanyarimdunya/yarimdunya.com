@@ -7,12 +7,14 @@ hide:
 
 ---
 
-# Özcan Yarımdunya
+# Hi!
 
-Hi!
+---
 
-Welcome to my website
+Welcome to my website!
 
-I am a simple **`Python`** Developer
+My name is **Özcan**
 
-Check out my
+and 
+
+I am a simple **`Python`** Developer.

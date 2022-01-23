@@ -11,10 +11,18 @@ markdown_extensions:
 
 theme:
   name: material
-  custom_dir: src
+  custom_dir: theme
   palette:
-    scheme: slate
-    primary: black
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   favicon: assets/images/favicon.ico
   icon:
     logo: svg/favicon
