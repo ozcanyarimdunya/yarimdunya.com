@@ -39,28 +39,32 @@ sshpass -f /tmp/pwd.txt scp -r username@server:/tmp/* ~/Desktop/
 ssh -l user username@server
 ```
 
-### multi line command execution - 1
 
-```shell
-read -r -d '' command << EOM
-cd /remote/path
-git pull
-process=\$(ls -la | awk '{print \$1}')
-echo "\${process}"
-EOM
+### multi line command execution
 
-ssh username@server "${command}"
-```
+=== "with local variables"
+
+    ```shell
+    localVar="test"
+    read -r -d '' command << EOM
+    echo "${localVar}"
+    cd /remote/path
+    git pull
+    process=\$(ls -la | awk '{print \$1}')
+    echo "\${process}"
+    EOM
+    
+    ssh username@server "${command}"
+    ```
 
 
-### multi line command execution - 2
+=== "without local variables" 
 
-```shell
-ssh username@server << 'ENDSSH'
-cd /remote/path
-git pull
-process=$(ls -la | awk '{print $1}')
-echo "${process}"
-ENDSSH
-```
-
+    ```shell
+    ssh username@server << 'ENDSSH'
+    cd /remote/path
+    git pull
+    process=$(ls -la | awk '{print $1}')
+    echo "${process}"
+    ENDSSH
+    ```
