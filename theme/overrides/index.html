@@ -39,7 +39,10 @@
 {% block scripts %}
 {{ super() }}
 <script>
-  (() => document.querySelectorAll(".headerlink").forEach(el => el.remove()))()
+  (() => {
+    document.querySelectorAll(".headerlink").forEach(el => el.remove());
+    document.querySelector(".md-content__button").remove();
+  })();
 </script>
 {% endblock %}
 

@@ -9,8 +9,6 @@ hide:
 
 # Hi!
 
----
-
 Welcome to my website!
 
 My name is **Özcan**

@@ -2,12 +2,21 @@ site_name: Özcan Yarımdünya
 site_url: https://yarimdunya.com
 site_author: Özcan Yarımdünya
 site_description: Özcan Yarımdünya
+repo_name: yarimdunya.com
+repo_url: https://github.com/ozcanyarimdunya/yarimdunya.com
 
 copyright: Copyright &copy; 2022 <a href="https://yarimdunya.com" target="_blank">Özcan Yarımdünya<a/>
 
 markdown_extensions:
-  toc:
-    permalink: "#"
+  - toc:
+      permalink: "#"
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 theme:
   name: material
@@ -33,6 +42,8 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - content.tabs.link
+
 plugins:
   - search
 
