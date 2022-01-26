@@ -1,4 +1,3 @@
 # PyQt6
 
-Coming soon, expecto patronum...
-
+Coming soon, expecto patronum
