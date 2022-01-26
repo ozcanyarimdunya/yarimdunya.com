@@ -5,6 +5,8 @@
 Get an access token 
 
 ```shell
-TOKEN="Your access token"
-git push "https://${TOKEN}@github.com/ozcanyarimdunya/yarimdunya.com.git"
+username=""
+repository="
+ACCESS_TOKEN=""
+git push "https://${ACCESS_TOKEN}@github.com/${username}/${repository}.git"
 ```
