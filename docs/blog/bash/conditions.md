@@ -22,7 +22,7 @@ fi
 ```shell
 zone=$(hostname) # my-pc-01
 if [[ "${zone}" == my* ]]; then
-  echo "${zone} startswith my*"
+  echo "${zone} starts with my*"
 else
   echo "${zone} doesn't start with my*"
 fi
