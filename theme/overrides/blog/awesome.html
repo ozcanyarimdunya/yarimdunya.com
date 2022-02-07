@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+  (() => {
+    document.querySelectorAll("article ul li a").forEach(el => el.target = "_blank");
+  })();
+</script>
+{% endblock %}
+

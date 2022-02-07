@@ -4,7 +4,6 @@ title: Home
 hide:
   - toc
   - navigation
-
 ---
 
 # Hi!
