@@ -36,15 +36,22 @@ plugins:
   - search
 
 markdown_extensions:
-  - toc:
-      permalink: "#"
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.snippets:
+      check_paths: true
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - toc:
+      permalink: "¤"
 
 extra:
   social:
