@@ -37,6 +37,8 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - codehilite
+  - extra
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -50,6 +52,10 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - mdx_include:
+      base_path: docs
   - toc:
       permalink: "¤"
 
