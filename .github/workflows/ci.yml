@@ -27,8 +27,5 @@ jobs:
     - name: Install dependencies
       run: make install
 
-    - name: Install dependencies
-      run: make install
-
     - name: Publish site to the GitHub pages
       run: make publish

@@ -42,18 +42,18 @@ class AbstractFactory(ABC):
 
 class ChromeBrowser(Browser):
     def create_toolbar(self):
-        pass
+        return
 
     def create_window(self):
-        pass
+        return
 
 
 class FirefoxBrowser(Browser):
     def create_toolbar(self):
-        pass
+        return
 
     def create_window(self):
-        pass
+        return
 
 
 class Website(Site):
