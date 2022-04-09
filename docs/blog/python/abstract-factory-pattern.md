@@ -1,7 +1,7 @@
 # Abstract factory pattern
 
 ```python
-{!../codes/python/abstract-factory-pattern.py!}
+{!codes/python/abstract-factory-pattern.py!}
 ```
 
 **Output**

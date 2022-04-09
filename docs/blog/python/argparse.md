@@ -4,7 +4,7 @@
 ## Basic argparse
 
 ```python
-{!../codes/python/argparse-basic.py!}
+{!codes/python/argparse-basic.py!}
 ```
 
 ### Usage
@@ -15,7 +15,7 @@
 
 
 ```python
-{!../codes/python/argparse-advance.py!}
+{!codes/python/argparse-advance.py!}
 ```
 
 ### Usage

@@ -3,7 +3,7 @@
 ## Log utility
 
 ```python
-{!../codes/bash/utils.sh!}
+{!codes/bash/utils.sh!}
 ```
 
 ### Usage

@@ -3,7 +3,7 @@
 ## Sample spinner
 
 ```shell
-{!../codes/bash/spinner.sh!}
+{!codes/bash/spinner.sh!}
 ```
 
 ### Usage
