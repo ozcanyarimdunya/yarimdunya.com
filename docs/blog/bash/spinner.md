@@ -8,4 +8,4 @@
 
 ### Usage
 
-[![asciicast](https://asciinema.org/a/tqyp8TQmFyc6gcIqt8EOhmHog.svg)](https://asciinema.org/a/tqyp8TQmFyc6gcIqt8EOhmHog)
+![spinner](./images/spinner.gif)
