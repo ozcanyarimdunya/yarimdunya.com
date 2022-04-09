@@ -6,6 +6,6 @@
 {!../codes/bash/utils.sh!}
 ```
 
-**Output**
+### Usage
 
-![bash-utils.png](../images/bash-utils.png)
+![bash-utils.png](./images/bash-utils.png)
