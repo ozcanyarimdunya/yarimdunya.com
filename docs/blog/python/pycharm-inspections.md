@@ -23,6 +23,7 @@
 # noinspection PyDictCreation
 # noinspection PyDictDuplicateKeys
 # noinspection PyDocstringTypes
+# noinspection DuplicatedCode
 # noinspection PyExceptClausesOrder
 # noinspection PyExceptionInheritance
 # noinspection PyFromFutureImport
