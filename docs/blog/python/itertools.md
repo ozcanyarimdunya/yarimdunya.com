@@ -6,4 +6,4 @@
 {!codes/python/itertools-cycle.py!}
 ```
 
-![tertools-cycle.gif](./images/tertools-cycle.gif)
+![itertools-cycle.gif](./images/itertools-cycle.gif)
