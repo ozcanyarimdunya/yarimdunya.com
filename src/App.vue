@@ -2,7 +2,7 @@
   <main class="px-4 sm:px-0 flex items-center h-[80vh]">
     <div class="mx-auto w-full max-w-xl bg-white print:space-y-4 border p-4 md:p-6 rounded shadow-sm">
       <!-- Header -->
-      <div class="flex items-start justify-between">
+      <div class="flex items-center justify-between">
         <div class="flex-1 space-y-1.5">
           <h1 class="text-2xl font-bold">{{ data.name }}</h1>
           <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
@@ -60,7 +60,7 @@
             </a>
           </div>
         </div>
-        <Avatar class="size-28 sm:size-36 rounded-xl">
+        <Avatar class="size-24 sm:size-36 rounded-xl">
           <AvatarImage :alt="data.name" :src="data.avatarUrl"/>
           <AvatarFallback>{{ data.name }}</AvatarFallback>
         </Avatar>
