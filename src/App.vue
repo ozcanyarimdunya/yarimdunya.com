@@ -1,5 +1,5 @@
 <template>
-  <main class="px-4 sm:px-0 h-screen flex items-center">
+  <main class="px-4 sm:px-0 flex items-center h-[80vh]">
     <div class="mx-auto w-full max-w-xl bg-white print:space-y-4 border p-4 md:p-6 rounded shadow-sm">
       <!-- Header -->
       <div class="flex items-start justify-between">
