@@ -1,17 +1,17 @@
 <template>
-  <main class="px-4 sm:px-0 py-2 flex items-center">
+  <main class="sm:py-2 flex items-center">
     <div
         class="mx-auto w-full max-w-screen-lg bg-white print:space-y-4 border p-4 sm:p-6 rounded shadow-sm flex flex-col gap-4">
-      <div class="flex items-center gap-4 border-b pb-2">
-        <router-link to="/">
-          <ArrowLeftIcon class="size-8 text-primary"/>
+      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground">
+        <router-link :to="{name: 'home'}">
+          <ArrowLeftIcon class="size-6"/>
         </router-link>
-        <h1 class="text-2xl font-semibold">
+        <h1 class="text-md">
           Blog
         </h1>
       </div>
-      <span>
-        These are some of the blogs I have written.
+      <span class="text-muted-foreground">
+        These are some of the blog posts I have written.
       </span>
       <ul class="space-y-3">
         <li v-for="(blog, index) in blogFiles" :key="index">
@@ -34,7 +34,7 @@
 
 <script setup>
 import {ArrowLeftIcon} from "@radix-icons/vue";
-import blogFiles from "@/data/blog-files";
+import {blogFiles} from "@/data";
 </script>
 
 <style scoped></style>

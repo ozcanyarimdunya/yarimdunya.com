@@ -4,28 +4,28 @@
       <!-- Header -->
       <div class="flex items-center justify-between">
         <div class="flex-1 space-y-1.5">
-          <h1 class="text-2xl font-bold">{{ data.name }}</h1>
+          <h1 class="text-2xl font-bold">{{ resumeData.name }}</h1>
           <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
-            {{ data.about }}
+            {{ resumeData.about }}
           </p>
           <p class="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
             <a
                 class="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                :href="data.company.link"
+                :href="resumeData.company.link"
                 target="_blank"
             >
               <BackpackIcon class="size-3"/>
-              {{ data.company.name }}
+              {{ resumeData.company.name }}
             </a>
           </p>
           <p class="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
             <a
                 class="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                :href="data.location.link"
+                :href="resumeData.location.link"
                 target="_blank"
             >
               <GlobeIcon class="size-3"/>
-              {{ data.location.city }} / {{ data.location.country }}
+              {{ resumeData.location.city }} / {{ resumeData.location.country }}
             </a>
           </p>
           <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground ">
@@ -34,9 +34,9 @@
                 variant="outline"
                 size="icon"
                 asChild
-                v-if="data.contact.email"
+                v-if="resumeData.contact.email"
             >
-              <a :href="`mailto:${data.contact.email}`">
+              <a :href="`mailto:${resumeData.contact.email}`">
                 <EnvelopeClosedIcon class="size-4"/>
               </a>
             </Button>
@@ -45,7 +45,7 @@
                 variant="outline"
                 size="icon"
                 asChild
-                v-for="social in data.contact.social"
+                v-for="social in resumeData.contact.social"
                 :key="social.name"
             >
               <a :href="social.url">
@@ -55,20 +55,20 @@
             <router-link :to="{name: 'blog'}">
               <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
                 <span class="hidden md:block">Blog</span>
-                <PersonIcon class="size-4"/>
+                <RocketIcon class="size-4"/>
               </Button>
             </router-link>
-            <a :href="data.resumeLink" target="_blank">
+            <a :href="resumeData.resumeLink" target="_blank">
               <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
                 <span class="hidden md:block">Resume</span>
-                <ExternalLinkIcon class="size-4"/>
+                <ReaderIcon class="size-4"/>
               </Button>
             </a>
           </div>
         </div>
         <Avatar class="size-24 sm:size-36 rounded-xl">
-          <AvatarImage :alt="data.name" :src="data.avatarUrl"/>
-          <AvatarFallback>{{ data.name }}</AvatarFallback>
+          <AvatarImage :alt="resumeData.name" :src="resumeData.avatarUrl"/>
+          <AvatarFallback>{{ resumeData.name }}</AvatarFallback>
         </Avatar>
       </div>
     </div>
@@ -76,10 +76,10 @@
 </template>
 
 <script setup>
-import {BackpackIcon, EnvelopeClosedIcon, ExternalLinkIcon, GlobeIcon, PersonIcon} from "@radix-icons/vue";
+import {BackpackIcon, EnvelopeClosedIcon, GlobeIcon, ReaderIcon, RocketIcon} from "@radix-icons/vue";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import data from '@/data'
+import {resumeData} from '@/data'
 </script>
 
 <style scoped></style>

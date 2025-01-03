@@ -1,6 +1,6 @@
 import {GithubLogoIcon, LinkedinLogoIcon} from "@radix-icons/vue";
 
-export default {
+export const resumeData = {
   name: "Özcan Yarımdünya",
   about: "Simple Python Developer",
   avatarUrl: "https://avatars.githubusercontent.com/u/12237463?v=4",
@@ -31,3 +31,15 @@ export default {
   },
   resumeLink: "https://ozcan.yarimdunya.com",
 };
+
+const blogs = import.meta.glob("@/data/blog-files/*.md", {query: "raw"});
+
+export const blogFiles = Object.entries(blogs).map(([path, content]) => {
+  const [, number, slug, date] = path.match(/(\d+)_(.*)_(\d{2}-\d{2}-\d{4})\.md$/)
+  return {
+    title: slug.replace(/-/g, ' '),
+    date: date,
+    slug: `${number}_${slug}_${date}`,
+    content: content,
+  }
+});

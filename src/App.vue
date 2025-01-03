@@ -4,9 +4,9 @@
 
 <script setup>
 import {onBeforeMount} from "vue";
-import data from '@/data'
+import {resumeData} from '@/data'
 
-onBeforeMount(() => document.title = data.name);
+onBeforeMount(() => document.title = resumeData.name);
 </script>
 
 <style>

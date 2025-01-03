@@ -1,17 +1,14 @@
 <template>
-  <main class="px-4 sm:px-0 py-2 flex items-center">
+  <main class="sm:py-2 flex items-center">
     <div
         class="mx-auto w-full max-w-screen-lg bg-white print:space-y-4 border p-4 sm:p-6 rounded shadow-sm flex flex-col gap-4">
-      <div class="flex items-center gap-4 border-b pb-2">
+      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground">
         <router-link to="/blog">
-          <ArrowLeftIcon class="size-8 text-primary"/>
+          <ArrowLeftIcon class="size-6"/>
         </router-link>
-        <h1 class="text-2xl font-semibold w-full ">
+        <h1 class="text-md">
           {{ blog.title }}
         </h1>
-        <p class="text-muted-foreground text-sm text-end text-nowrap">
-          {{ blog.date }}
-        </p>
       </div>
       <div v-html="blog.html" class="prose prose-sm prose-code:text-xs prose-img:rounded min-w-full"></div>
       <p class="text-muted-foreground text-sm text-end">
@@ -25,15 +22,21 @@
 <script setup>
 import {ArrowLeftIcon} from "@radix-icons/vue";
 import {onMounted, ref} from "vue";
-import {useRoute} from "vue-router";
-import blogFiles from "@/data/blog-files";
+import {useRoute, useRouter} from "vue-router";
 import {marked} from "marked";
+import {blogFiles} from "@/data";
 
 const route = useRoute()
+const router = useRouter()
 const blog = ref({})
 
 onMounted(() => {
-  blog.value = blogFiles.find(b => b.slug === route.params.slug)
+  const found = blogFiles.find(b => b.slug === route.params.slug)
+  if (!found) {
+    router.push({name: 'not-found'})
+    return
+  }
+  blog.value = found
   blog.value.content().then(t => blog.value.html = marked(t.default))
 })
 
