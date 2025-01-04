@@ -9,6 +9,12 @@
         <h1 class="text-md">
           Blog Posts
         </h1>
+        <router-link :to="{name: 'home'}" class="ml-auto">
+          <Button variant="outline" class="text-muted-foreground" size="sm">
+            <HomeIcon class="size-4"/>
+            <span class="hidden md:block">Home</span>
+          </Button>
+        </router-link>
       </div>
       <span class="text-muted-foreground">
         These are some of the blog posts I have written.
@@ -33,8 +39,9 @@
 </template>
 
 <script setup>
-import {ArrowLeftIcon} from "@radix-icons/vue";
+import {ArrowLeftIcon, HomeIcon} from "@radix-icons/vue";
 import {blogFiles} from "@/data";
+import {Button} from "@/components/ui/button";
 </script>
 
 <style scoped></style>

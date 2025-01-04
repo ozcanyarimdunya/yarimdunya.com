@@ -54,14 +54,14 @@
             </Button>
             <router-link :to="{name: 'blog'}">
               <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
-                <span class="hidden md:block">Blog</span>
                 <RocketIcon class="size-4"/>
+                <span class="hidden md:block">Blog</span>
               </Button>
             </router-link>
             <a :href="resumeData.resumeLink" target="_blank">
               <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
-                <span class="hidden md:block">Resume</span>
                 <ReaderIcon class="size-4"/>
+                <span class="hidden md:block">Resume</span>
               </Button>
             </a>
           </div>
