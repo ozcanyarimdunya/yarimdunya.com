@@ -7,7 +7,7 @@
           <ArrowLeftIcon class="size-6"/>
         </router-link>
         <h1 class="text-md">
-          Blog
+          Blog Posts
         </h1>
       </div>
       <span class="text-muted-foreground">

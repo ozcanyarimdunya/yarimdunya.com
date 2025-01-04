@@ -168,4 +168,4 @@ I/O operations.
 
 Experiment with the `processes` and `threads` parameters to find the optimal balance for your application!
 
-Happy Coding! 🚀
+Happy coding! 🚀

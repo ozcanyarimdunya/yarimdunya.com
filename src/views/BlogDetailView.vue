@@ -11,7 +11,8 @@
         </h1>
       </div>
       <div v-html="blog.html" class="prose prose-sm prose-code:text-xs prose-img:rounded min-w-full"></div>
-      <p class="text-muted-foreground text-sm text-end">
+      <p class="text-muted-foreground text-xs text-end mt-2 italic"
+      >
         Published on {{ blog.date }}
       </p>
 

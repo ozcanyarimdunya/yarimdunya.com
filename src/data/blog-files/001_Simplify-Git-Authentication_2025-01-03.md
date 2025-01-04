@@ -36,4 +36,4 @@ git config --global --unset credential.helper
 
 For added security, consider using SSH keys or `credential.helper cache`.
 
-Happy Coding! 🚀
+Happy coding! 🚀
