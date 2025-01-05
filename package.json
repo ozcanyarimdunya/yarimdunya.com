@@ -13,6 +13,7 @@
     "@radix-icons/vue": "^1.0.0",
     "@tailwindcss/typography": "^0.5.15",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vueuse/core": "^12.3.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "marked": "^15.0.5",

@@ -16,11 +16,16 @@
           </Button>
         </router-link>
       </div>
-      <div v-html="blog.html" class="prose prose-sm prose-code:text-xs prose-img:rounded min-w-full"></div>
+      <div v-if="blog.html"
+           v-html="blog.html"
+           class="prose prose-sm prose-code:text-xs prose-img:rounded min-w-full"></div>
+      <div v-else
+           class="flex items-center justify-center h-32 text-muted-foreground animate-pulse">
+        Loading...
+      </div>
       <p class="text-muted-foreground text-xs text-end mt-2 italic">
         Published on {{ blog.date }}
       </p>
-
     </div>
   </main>
 </template>
