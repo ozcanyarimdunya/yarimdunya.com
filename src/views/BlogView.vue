@@ -33,22 +33,19 @@
           </span>
         </div>
       </div>
-      <ul class="space-y-3">
+      <ul class="space-y-3 pt-2">
         <li v-for="(blog, index) in filteredBlogFiles" :key="index">
-          <router-link :to="{name: 'blog-detail', params: {slug: blog.slug}}">
-            <div
-                class="flex items-center justify-between gap-2 p-4 border rounded-sm hover:shadow-md transition duration-300 ease-in-out">
-              <span>
-                {{ index + 1 }}. {{ blog.title }}
-              </span>
-              <span class="text-muted-foreground text-sm text-nowrap">
-                {{ blog.date }}
-              </span>
-            </div>
-          </router-link>
+          <div class="flex flex-col mb-4">
+            <span class="text-muted-foreground text-xs">
+              {{ blog.date }}
+            </span>
+            <router-link :to="{name: 'blog-detail', params: {slug: blog.slug}}">
+              <span class="hover:underline hover:underline-offset-4">{{ blog.title }}</span>
+            </router-link>
+          </div>
         </li>
         <li v-if="filteredBlogFiles.length === 0">
-          <div class="p-4 border rounded-sm text-muted-foreground text-center">
+          <div class="p-4 rounded-sm text-muted-foreground text-center">
             No blog post found.
           </div>
         </li>
