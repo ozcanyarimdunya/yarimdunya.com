@@ -2,7 +2,7 @@
   <main class="sm:py-2 flex items-center">
     <div
         class="mx-auto w-full max-w-screen-lg bg-white print:space-y-4 border p-4 sm:p-6 rounded shadow-sm flex flex-col gap-4">
-      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground">
+      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground print:hidden">
         <router-link to="/blog">
           <ArrowLeftIcon class="size-6"/>
         </router-link>

@@ -2,7 +2,7 @@
   <main class="sm:py-2 flex items-center">
     <div
         class="mx-auto w-full max-w-screen-lg bg-white print:space-y-4 border p-4 sm:p-6 rounded shadow-sm flex flex-col gap-4">
-      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground">
+      <div class="flex items-center gap-4 border-b pb-2 text-muted-foreground print:hidden">
         <router-link :to="{name: 'home'}">
           <ArrowLeftIcon class="size-6"/>
         </router-link>
@@ -16,7 +16,7 @@
           </Button>
         </router-link>
       </div>
-      <div class="flex flex-col md:flex-row gap-2 items-center justify-between">
+      <div class="flex flex-col gap-2 items-start print:hidden">
         <span class="text-muted-foreground">
           These are some of the blog posts I have written.
         </span>
@@ -42,6 +42,9 @@
             <router-link :to="{name: 'blog-detail', params: {slug: blog.slug}}">
               <span class="hover:underline hover:underline-offset-4">{{ blog.title }}</span>
             </router-link>
+            <a :href="resolveUrl(blog.slug)" class="hidden print:block text-muted-foreground text-xs">
+                {{ resolveUrl(blog.slug) }}
+            </a>
           </div>
         </li>
         <li v-if="filteredBlogFiles.length === 0">
@@ -60,14 +63,23 @@ import {ArrowLeftIcon, HomeIcon, MagnifyingGlassIcon} from "@radix-icons/vue";
 import {blogFiles} from "@/data";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
+import {useRouter} from "vue-router";
 
+const router = useRouter()
 const searchQuery = ref('');
+
 const filteredBlogFiles = computed(() => {
-  return blogFiles.filter(blog => {
+  const files = blogFiles.filter(blog => {
     return blog.title.toLowerCase().includes(searchQuery.value.toLowerCase());
   });
+  files.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return files;
 });
 
+const resolveUrl = (slug) => {
+  const ext = router.resolve({name: 'blog-detail', params: {slug}}).href;
+  return `${window.location.origin}/${ext}`;
+};
 
 const handleSearch = (event) => {
   if (event.key === '/') {

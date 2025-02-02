@@ -28,7 +28,7 @@
               {{ resumeData.location.city }} / {{ resumeData.location.country }}
             </a>
           </p>
-          <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground ">
+          <div class="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
             <Button
                 class="size-8"
                 variant="outline"
@@ -65,8 +65,30 @@
               </Button>
             </a>
           </div>
+          <div class="hidden print:flex flex-col gap-y-1 text-xs text-muted-foreground">
+            <a class="flex items-center gap-2" :href="`mailto:${resumeData.contact.email}`">
+              <EnvelopeClosedIcon class="size-3"/>
+              {{ resumeData.contact.email }}
+            </a>
+            <a class="flex items-center gap-2"
+               v-for="social in resumeData.contact.social" :key="social.name"
+               :href="social.url" target="_blank">
+              <component :is="social.icon" class="size-3"/>
+              {{ social.url }}
+            </a>
+            <a class="flex items-center gap-2"
+               :href="blogUrl">
+              <RocketIcon class="size-3"/>
+              {{ blogUrl }}
+            </a>
+            <a class="flex items-center gap-2"
+               :href="resumeData.resumeLink" target="_blank">
+              <ReaderIcon class="size-3"/>
+              {{ resumeData.resumeLink }}
+            </a>
+          </div>
         </div>
-        <Avatar class="size-24 sm:size-36 rounded-xl">
+        <Avatar class="size-24 sm:size-36 rounded-xl print:size-48">
           <AvatarImage :alt="resumeData.name" :src="resumeData.avatarUrl"/>
           <AvatarFallback>{{ resumeData.name }}</AvatarFallback>
         </Avatar>
@@ -80,6 +102,11 @@ import {BackpackIcon, EnvelopeClosedIcon, GlobeIcon, ReaderIcon, RocketIcon} fro
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {resumeData} from '@/data'
+import {computed} from "vue";
+import {useRouter} from "vue-router";
+
+const router = useRouter()
+const blogUrl = computed(() => `${window.location.origin}/${router.resolve({name: 'blog'}).href}`)
 </script>
 
 <style scoped></style>
