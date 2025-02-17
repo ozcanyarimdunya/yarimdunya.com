@@ -1,13 +1,12 @@
 {
   "name": "yarimdunya.com",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "create-blog": "node create-blog-file.js"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-icons/vue": "^1.0.0",

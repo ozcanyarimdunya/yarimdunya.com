@@ -52,12 +52,6 @@
                 <component :is="social.icon" class="size-4"/>
               </a>
             </Button>
-            <router-link :to="{name: 'blog'}">
-              <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
-                <RocketIcon class="size-4"/>
-                <span class="hidden md:block">Blog</span>
-              </Button>
-            </router-link>
             <a :href="resumeData.resumeLink" target="_blank">
               <Button variant="outline" class="text-muted-foreground px-2 md:px-3" size="sm">
                 <ReaderIcon class="size-4"/>
@@ -65,7 +59,7 @@
               </Button>
             </a>
           </div>
-          <div class="hidden print:flex flex-col gap-y-1 text-xs text-muted-foreground">
+          <div class="hidden print:flex flex-col gap-y-2 text-xs text-muted-foreground">
             <a class="flex items-center gap-2" :href="`mailto:${resumeData.contact.email}`">
               <EnvelopeClosedIcon class="size-3"/>
               {{ resumeData.contact.email }}
@@ -75,11 +69,6 @@
                :href="social.url" target="_blank">
               <component :is="social.icon" class="size-3"/>
               {{ social.url }}
-            </a>
-            <a class="flex items-center gap-2"
-               :href="blogUrl">
-              <RocketIcon class="size-3"/>
-              {{ blogUrl }}
             </a>
             <a class="flex items-center gap-2"
                :href="resumeData.resumeLink" target="_blank">
@@ -98,15 +87,10 @@
 </template>
 
 <script setup>
-import {BackpackIcon, EnvelopeClosedIcon, GlobeIcon, ReaderIcon, RocketIcon} from "@radix-icons/vue";
+import {BackpackIcon, EnvelopeClosedIcon, GlobeIcon, ReaderIcon} from "@radix-icons/vue";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {resumeData} from '@/data'
-import {computed} from "vue";
-import {useRouter} from "vue-router";
-
-const router = useRouter()
-const blogUrl = computed(() => `${window.location.origin}/${router.resolve({name: 'blog'}).href}`)
 </script>
 
 <style scoped></style>

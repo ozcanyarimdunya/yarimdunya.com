@@ -15,7 +15,6 @@ export const resumeData = {
   },
   contact: {
     email: "ozcanyd@gmail.com",
-    tel: "+905310821028",
     social: [
       {
         name: "GitHub",
@@ -31,15 +30,3 @@ export const resumeData = {
   },
   resumeLink: "https://ozcan.yarimdunya.com",
 };
-
-const blogs = import.meta.glob("@/data/blog-files/*.md", {query: "raw"});
-
-export const blogFiles = Object.entries(blogs).map(([path, content]) => {
-  const [, number, slug, date] = path.match(/(\d+)_(.*)_(\d{4}-\d{2}-\d{2})\.md$/)
-  return {
-    title: slug.replace(/-/g, ' '),
-    date: date,
-    slug: `${number}_${slug}_${date}`,
-    content: content,
-  }
-});
